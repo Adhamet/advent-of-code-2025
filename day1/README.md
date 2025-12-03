@@ -30,8 +30,8 @@ $$
 k \equiv \text{prev} \pmod{M}.
 $$  
 
-If this is just one step, then obviously if `k > val`, we do not reach 0; the step size is not enough.   
-If `k = 0`, then we do not move to count a crossing at all and we treat this as max as possible `k = M` s.t. it becomes unreachable since `val < M`.
+If this is just one step, then obviously if `k > val`, we do not reach 0; the k required to reach 0 is too big and my actual step val is too small.   
+Similarily if `k = 0`, then we do not move to count a crossing at all so we arbitrarily pick a vale as max as possible `k = M` such that it becomes unreachable since `val < M`.
 
 Now we need to find the largest integer `n` such that:
 
@@ -39,4 +39,4 @@ $$
 k + nM \le \text{val},
 $$
 
-and we add 1 for the first step.
+which means, for how many iterations of k valued steps will get me to val (my actual step), given that we have k, m and val we could solve for n to find it, and we add 1 for the first step.
