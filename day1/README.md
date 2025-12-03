@@ -4,7 +4,7 @@ Simply we loop over each line to take our code: if the first character is `'L'`,
 If it is `'R'`, we add.  
 
 # Part 2 Approach
-Let us first simulate a single move as one-unit steps. We want the smallest positive step \(k\) (with $\(1 \le k \le \text{val}\)$) such that the arrow points at 0.  
+Let us first simulate a single move as one-unit steps. We want the smallest positive step `k` (with `1 <= k <= val`) such that the arrow points at `0`.  
 
 The modular condition is:  
 
@@ -30,10 +30,10 @@ $$
 k \equiv \text{prev} \pmod{M}.
 $$  
 
-If this is just one step, then obviously if \(k > \text{val}\), we do not reach 0; the step size is not enough.   
-If \(k = 0\), then we do not move to count a crossing at all and we treat this as max as possible \(k = M\) s.t. it becomes unreachable since \(\text{val} < M\)).
+If this is just one step, then obviously if `k > val`, we do not reach 0; the step size is not enough.   
+If `k = 0`, then we do not move to count a crossing at all and we treat this as max as possible `k = M` s.t. it becomes unreachable since `val < M`.
 
-Now we need to find the largest integer \(n\) such that:
+Now we need to find the largest integer `n` such that:
 
 $$
 k + nM \le \text{val},
