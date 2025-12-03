@@ -4,7 +4,7 @@ Simply we loop over each line to take our code: if the first character is `'L'`,
 If it is `'R'`, we add.  
 
 # Part 2 Approach
-Let us first simulate a single move as one-unit steps. We want the smallest positive step \(k\) (with \(1 \le k \le \text{val}\)) such that the arrow points at 0.  
+Let us first simulate a single move as one-unit steps. We want the smallest positive step \(k\) (with $\(1 \le k \le \text{val}\)$) such that the arrow points at 0.  
 
 The modular condition is:  
 
