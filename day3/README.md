@@ -5,6 +5,7 @@ This one was rather a simple brute-force where you just do 2 nested loops for lo
 This problem could be solved the same way with part 1 with `12` nested loops since there are no restrictions in AOC, but it'll take a long-time and it is quite in-efficient as time complexity here would be $n^{12}$. A more efficient way would be to dp, first I thought of a recursive solution of parameters  
 
 [idx][current character taken out of the 12 we need respective to their order in the resulting subsequence]  
+where each dp[i][j] holds the max subsequence so far.
 
 but unfortunately I learnt that bash is very bad with recursions the hard way, and as intuitive as the solution was I couldn't get it to be effective enough so I had to figure out something else..  
 
