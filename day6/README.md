@@ -21,5 +21,6 @@ In this problem, let us view the input as a computer would, a n by m grid of cha
 
 For each column from right to left, we loop on each row from top to bottom, as we descend for each column we gather all the digits into some number, so for example using the example visualized above in part 1, going down the last column will only gather `empty space` + `empty space` + `4` + `empty space`, we will only take the `4`, for the column before it: it will be `4` + `3` + `1` + `empty space`, thus we will take `431`, and so on..  
 For each column where we fully take in some number, we store that number into some indexed array called `nums`, so for example from right to left until the column of index `12` we will have in `nums`: `(4, 431, 623)`.  
-We will also have some variable called `op`, so when we meet an operation which will happen at index `12` and it will be `+`, then we apply the given operation on all the numbers in `nums`, and then add the result to `ans`..  
+We will also have some variable called `op`, so when we meet an operation which will happen at index `12` and it will be `+`, then we apply the given operation on all the numbers in `nums`, and then add the result to `ans`...
 And when we meet an empty column like index `11`, we clear the array `nums` and start over again the same logic until we finish all the given operations.
+
