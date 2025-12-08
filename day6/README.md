@@ -4,7 +4,7 @@ In this problem, let us not view the input as a computer would which is a n by m
 We took the input as it is and we stored the numbers in an 1d indexed array called `nums` and the operations into another 1d indexed array called `ops`.  
 Then we initialized an array called `res` of same size as `ops` which should hold the values of each column independently.  
 If the operation on `ops[i]` for some `i` is `*` then we initialize `res[i]` with `1`, otherwise `0`.  
-Then we loop on all numbers and use modulus operations to make sure that the number in index `i` in array `nums` uses operation `op[i % size of ops]` with `nums[i]` on `res[i % size of ops]`.  
+Then we loop on all numbers and use modulus operations to make sure that the number in index `i` in array `nums` uses operation `ops[i % size of ops]` with `nums[i]` on `res[i % size of ops]`.  
 
 For visuals
 ```
@@ -13,7 +13,7 @@ For visuals
   6 98  215 314
 *   +   *   +  
 ```  
-the number in the second row and second column (`64`) will be have `index = 5` in my `nums` array, when we do `5 % 4` we will end up with `1`, meaning we will use `res[1]` with operation of index `1` which is `+` on `nums[5]`.
+the number in the second row and second column (`64`) will be have `index = 5` in my `nums` array, when we do `5 % 4`, where `4` is the size of the ops array, we will end up with `1`, meaning we will use `res[1]` with operation of index `1` which is `+` on `nums[5]`.
 
 
 # Part 2  
