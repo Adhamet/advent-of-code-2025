@@ -1,0 +1,8 @@
+# Part 1  
+Today is a straight-forward Disjoint Set Union problem, if you are un-aware of the topic you might not benefit too much from my solution, but I'll attempt explaining it.  
+The idea is quite simple and standard: DSU is a topic related to Graph Theory that offers a way to connect components (a component is a set of nodes connected together through edges) together while holding data like the root of the component and the size of it (the number of nodes in it), so if we treat each point in the 3d space as a node, we then could calculate the distance between each possible pair, so that we can then sort the edges between each point `u` and `v` based on the distance between them, so now, in an array we will have the list of possible edges all sorted by their differences so index `0` for example holds the connection or edge between nodes `u` and `v` which is smallest in distance length.  
+Once we do that sort, we simply loop on the `min(count of all possible edges, 1000)` since the problem stated explicitily `connect together the 1000 pairs of junction boxes which are closest together`, and connect them through DSU.  
+Afterwards, for each component (through their root) get info about it's size and store it in an array, and extract the largest 3 values, we could do that through reverse sort, then multiply the largest 3 (in our case first 3) into our variable.  
+
+# Part 2  
+This one is simpler than part 1, through the same sorted array of distances keep connecting until there is only 2 components left and just multiply the last points' `x` co-ordinates.
