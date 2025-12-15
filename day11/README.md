@@ -12,7 +12,7 @@ svr → fft → dac → out
 That's the main trick, then the final answer is simply:  
 $$
 \text{paths of }(svr \to dac \cdot dac \to fft \cdot fft \to out)
-\;+\;
++
 \text{paths of }(svr \to fft \cdot fft \to dac \cdot dac \to out)
 $$
 
