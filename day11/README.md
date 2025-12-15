@@ -10,6 +10,10 @@ svr → fft → dac → out
 ```  
 
 That's the main trick, then the final answer is simply:  
-$$paths_of_(svr->dac * dac->fft * fft->out) + paths_of_(svr->fft * fft->dac * fft->out)$$  
+$$
+\text{paths of }(svr \to dac \cdot dac \to fft \cdot fft \to out)
+\;+\;
+\text{paths of }(svr \to fft \cdot fft \to dac \cdot dac \to out)
+$$
 
 We also used dp to memorize the paths we pass by so we don't recount them each time instead it just reuses the value stored in the memoization.
